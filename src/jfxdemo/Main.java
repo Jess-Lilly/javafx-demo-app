@@ -13,42 +13,6 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class Main extends Application // VERSION 2
-{
-    @Override
-    public void start(Stage primaryStage) {
-        Button button = new Button();
-        button.setText("Click Me");
-        button.addEventHandler(ActionEvent.ACTION, new MyButtonEventHandler());
-
-        StackPane root = new StackPane();
-        root.getChildren().add(button);
-
-        Scene scene = new Scene(root, 300, 250);
-
-        primaryStage.setTitle("Demo");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-
-    }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-
-}
-
-class MyButtonEventHandler implements EventHandler<ActionEvent>
-{
-    @Override
-    public void handle(ActionEvent event) {
-        ((Button) event.getSource()).setText("Leave me alone!");
-    }
-}
-
-
-
-/*
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -86,7 +50,6 @@ public class Main extends Application // VERSION 3
         launch(args);
     }
 }
-*/
 
 /*
 import javafx.application.Application;
