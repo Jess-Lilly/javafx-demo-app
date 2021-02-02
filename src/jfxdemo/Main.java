@@ -33,9 +33,7 @@ public class Main extends Application // VERSION 4
     public void start(Stage primaryStage) {
         Button button = new Button();
         button.setText("Click Me");
-        button.addEventHandler(ActionEvent.ACTION,
-                event -> button.setText("Leave me alone!"));
-        // or even better: button.setOnAction(event -> button.setText("Leave me alone!"));
+        button.setOnAction(event -> button.setText("Leave me alone!"));
 
         StackPane root = new StackPane();
         root.getChildren().add(button);
